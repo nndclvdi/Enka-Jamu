@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Enka Jamu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+          }
+          .navbar {
+            background-color: #2d6a4f; 
+          }
+          
+          .btn-success {
+            background-color: #40916c;
+            border: none;
+          }
+          
+          .btn-danger {
+            background-color: #6a4c3c;
+            border: none;
+          }
+            
+        :root {
+            --primary-color: #2C5F2D;
+            --secondary-color: #4E342E; 
+            --accent-color: #97BC62; 
+            --light-color: #F7F7E8; 
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/300');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-info-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(44, 95, 45, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ꦄꦼꦤ꧀ꦏꦗꦩꦸ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="kontak.html">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pesan.html">Pesan Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Hubungi Kami</h1>
+            <p class="lead">Kami siap mendengarkan pertanyaan, saran, dan pesanan Anda</p>
+        </div>
+    </header>
+
+    <!-- Contact Info -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Alamat</h4>
+                        <p class="mb-0">Jl. Raya Universitas Pembangunan Nasional Veteran Jawa Timur<br>Surabaya, Jawa Timur<br>Indonesia 57511</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h4>Telepon</h4>
+                        <p class="mb-1">23081010036</p>
+                        <p class="mb-0">+62 271 123 456</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="contact-info-card text-center">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p class="mb-1">info@enkajamu.com</p>
+                        <p class="mb-0">cs@enkajamu.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-card">
+                        <h2 class="text-center mb-4">Kirim Pesan</h2>
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Nama Lengkap <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="phone" class="form-label">Nomor Telepon</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="subject" class="form-label">Subjek <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="subject" name="subject" required>
+                                        <option value="" selected disabled>Pilih Subjek</option>
+                                        <option value="Pertanyaan Produk">Pertanyaan Produk</option>
+                                        <option value="Pemesanan">Pemesanan</option>
+                                        <option value="Kerjasama">Kerjasama</option>
+                                        <option value="Saran">Saran & Masukan</option>
+                                        <option value="Komplain">Komplain</option>
+                                        <option value="Lainnya">Lainnya</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Pesan <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="terms" required>
+                                <label class="form-check-label" for="terms">Saya setuju bahwa data saya akan diproses sesuai dengan kebijakan privasi</label>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">Kirim Pesan</button>
+                            </div>
+                        </form>
+                        <div id="formResult" class="mt-4 text-center" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Lokasi Kami</h2>
+            <div class="bg-white p-3 rounded shadow">
+                <!-- Placeholder for map -->
+                <div class="ratio ratio-16x9">
+                    <img src="assets/images/lokasi.png" alt="Map Location" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Pertanyaan yang Sering Diajukan</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                    Bagaimana cara memesan produk Enka Jamu?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Anda dapat memesan produk kami melalui website dengan mengunjungi halaman Produk, atau menghubungi kami melalui WhatsApp, email, atau telepon. Kami juga memiliki toko fisik yang bisa Anda kunjungi langsung.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                    Berapa lama waktu pengiriman produk?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Waktu pengiriman tergantung pada lokasi Anda. Untuk wilayah Jawa, biasanya membutuhkan waktu 2-3 hari. Untuk luar Jawa, sekitar 3-5 hari. Kami menggunakan jasa pengiriman terpercaya untuk memastikan produk sampai dengan aman.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                    Apa metode pembayaran yang tersedia?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Kami menerima pembayaran melalui transfer bank, e-wallet (OVO, GoPay, DANA, LinkAja), dan COD (Cash On Delivery) untuk beberapa wilayah tertentu.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3 border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                    Apakah produk Enka Jamu sudah memiliki sertifikasi?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Ya, semua produk kami telah mendapatkan sertifikasi BPOM dan Halal dari MUI. Kami juga memiliki sertifikat PIRT untuk produk olahan pangan.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item border">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                    Apakah ada efek samping dari mengonsumsi jamu?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Jamu kami terbuat dari bahan-bahan alami dan umumnya aman dikonsumsi. Namun, setiap orang memiliki kondisi tubuh yang berbeda. Jika Anda memiliki kondisi kesehatan tertentu, sedang mengonsumsi obat-obatan, hamil, atau menyusui, sebaiknya konsultasikan dengan dokter sebelum mengonsumsi jamu.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Enka Jamu</h5>
+                    <p>Menyediakan jamu tradisional berkualitas dari bahan-bahan alami pilihan untuk kesehatan dan kebugaran.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Beranda</a></li>
+                        <li><a href="produk.html" class="text-white">Produk</a></li>
+                        <li><a href="tentang.html" class="text-white">Tentang Kami</a></li>
+                        <li><a href="kontak.html" class="text-white">Kontak</a></li>
+                        <li><a href="blog.html" class="text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Jl. Raya Universitas Pembangunan Nasional Veteran Jawa Timur</li>
+                            <li><i class="fas fa-phone me-2"></i> 23081010036</li>
+                            <li><i class="fas fa-envelope me-2"></i> info@enkajamu.com</li>
+                        </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Sosial Media</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 Enka Jamu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formResult = document.getElementById('formResult');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Collect form data
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+                
+               
+                console.log('Form data:', formData);
+                
+                formResult.innerHTML = '<div class="alert alert-success">Terima kasih! Pesan Anda telah berhasil terkirim. Kami akan menghubungi Anda segera.</div>';
+                formResult.style.display = 'block';
+                
+                contactForm.reset();
+                
+                setTimeout(function() {
+                    formResult.style.display = 'none';
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>

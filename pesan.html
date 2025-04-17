@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pesan Sekarang - Enka Jamu</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .navbar {
+        background-color: #2d6a4f; /* Hijau gelap alami */
+      }
+      
+      .btn-success {
+        background-color: #40916c;
+        border: none;
+      }
+      
+      .btn-danger {
+        background-color: #6a4c3c;
+        border: none;
+      }
+        
+    body {
+      background-color: #f7f7e8;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .form-section {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .table-section {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .status-badge {
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-size: 0.85rem;
+    }
+
+    .status-Baru {
+      background-color: #c8e6c9;
+      color: #256029;
+    }
+
+    .status-Proses {
+      background-color: #fff9c4;
+      color: #9e9d24;
+    }
+
+    .status-Pengantaran {
+      background-color: #bbdefb;
+      color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Form Pemesanan ꦄꦼꦤ꧀ꦏꦗꦩꦸ </h2>
+    <div class="form-section">
+      <form id="orderForm">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label for="nama" class="form-label">Nama Pemesan</label>
+            <input type="text" class="form-control" id="nama" required />
+          </div>
+          <div class="col-md-6">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+          <div class="col-md-6">
+            <label for="telepon" class="form-label">No Telepon</label>
+            <input type="text" class="form-control" id="telepon" required />
+          </div>
+          <div class="col-md-6">
+            <label for="alamat" class="form-label">Alamat</label>
+            <input type="text" class="form-control" id="alamat" required />
+          </div>
+          <div class="col-md-6">
+            <label for="menu" class="form-label">Pilih Menu</label>
+            <select class="form-select" id="menu" required>
+              <option value="" disabled selected>Pilih Menu</option>
+              <option>Jamu Kunyit Asam</option>
+              <option>Jamu Beras Kencur</option>
+              <option>Jamu Temulawak</option>
+              <option>Siruo Kunyit Asam</option>
+              <option>Sirup Beras Kencur</option>
+              <option>Kapsul Temulawak</option>
+              <option>Kapsul Jahe Merah</option>
+              <option>Paket Sehat Harian</option>
+              <option>Paket Detox</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="jumlah" class="form-label">Jumlah</label>
+            <input type="number" class="form-control" id="jumlah" value="1" min="1" required />
+          </div>
+          <div class="col-md-3">
+            <label for="tanggal" class="form-label">Tanggal</label>
+            <input type="date" class="form-control" id="tanggal" required />
+          </div>
+          <div class="col-md-12">
+            <label for="catatan" class="form-label">Catatan</label>
+            <textarea class="form-control" id="catatan" rows="2" placeholder="Opsional..."></textarea>
+          </div>
+        </div>
+        <div class="text-end mt-4">
+          <button type="submit" class="btn btn-success">Tambah Pemesanan</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="table-section">
+      <h4 class="mb-3">Daftar Pesanan Hari Ini</h4>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>No</th>
+              <th>Nama</th>
+              <th>Menu</th>
+              <th>Jumlah</th>
+              <th>Tanggal</th>
+              <th>Email</th>
+              <th>No Telp</th>
+              <th>Alamat</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="orderList">
+            <tr>
+              <td>1</td>
+              <td>Donanda Maulidyawati Suwondo</td>
+              <td>Jamu Beras Kencur</td>
+              <td>2</td>
+              <td>2025-04-17</td>
+              <td>23081010036@mail.com</td>
+              <td>23081010036</td>
+              <td>ETS_Pemrograman Web</td>
+              <td><span class="status-badge status-Proses">Proses</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Siti Aisyah</td>
+              <td>Jamu Temulawak</td>
+              <td>1</td>
+              <td>2025-04-16</td>
+              <td>siti@mail.com</td>
+              <td>081987654321</td>
+              <td>Jl. Anggrek No.5</td>
+              <td><span class="status-badge status-Baru">Baru Dibuat</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Budi Santoso</td>
+              <td>Jamu Sirih</td>
+              <td>3</td>
+              <td>2025-04-15</td>
+              <td>budi@mail.com</td>
+              <td>082233445566</td>
+              <td>Jl. Kenanga No.12</td>
+              <td><span class="status-badge status-Pengantaran">Pengantaran</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+<!-- MODAL NOTA -->
+<div class="modal fade" id="notaModal" tabindex="-1" aria-labelledby="notaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-4">
+        <div class="modal-header">
+          <h5 class="modal-title" id="notaModalLabel">Nota Pemesanan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body" id="notaBody">
+
+        </div>
+        <div class="modal-footer">
+          <button onclick="window.print()" class="btn btn-primary">Cetak Nota</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const form = document.getElementById("orderForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+  
+      const nama = document.getElementById("nama").value;
+      const email = document.getElementById("email").value;
+      const telepon = document.getElementById("telepon").value;
+      const alamat = document.getElementById("alamat").value;
+      const menu = document.getElementById("menu").value;
+      const jumlah = document.getElementById("jumlah").value;
+      const tanggal = document.getElementById("tanggal").value;
+      const catatan = document.getElementById("catatan").value;
+  
+      const table = document.getElementById("orderList");
+      const row = document.createElement("tr");
+      const no = table.rows.length + 1;
+  
+      row.innerHTML = `
+        <td>${no}</td>
+        <td>${nama}</td>
+        <td>${menu}</td>
+        <td>${jumlah}</td>
+        <td>${tanggal}</td>
+        <td>${email}</td>
+        <td>${telepon}</td>
+        <td>${alamat}</td>
+        <td><span class="status-badge status-Baru">Baru Dibuat</span></td>
+      `;
+      table.appendChild(row);
+  
+      const notaHTML = `
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>No Telp:</strong> ${telepon}</p>
+        <p><strong>Alamat:</strong> ${alamat}</p>
+        <p><strong>Menu:</strong> ${menu}</p>
+        <p><strong>Jumlah:</strong> ${jumlah}</p>
+        <p><strong>Tanggal:</strong> ${tanggal}</p>
+        ${catatan ? `<p><strong>Catatan:</strong> ${catatan}</p>` : ''}
+        <hr>
+        <p><em>Terima kasih telah memesan di Enka Jamu.</em></p>
+      `;
+      document.getElementById("notaBody").innerHTML = notaHTML;
+      
+
+      const modal = new bootstrap.Modal(document.getElementById("notaModal"));
+      modal.show();
+  
+      form.reset();
+    });
+  </script>
+  <script src="script.js"></script>
+  <button onclick="tampilkanNota()">Tambah Pemesanan</button>
+
+</body>
+</html>

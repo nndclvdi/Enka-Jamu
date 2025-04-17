@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Enka Jamu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+          }
+          .navbar {
+            background-color: #2d6a4f; 
+          }
+          
+          .btn-success {
+            background-color: #40916c;
+            border: none;
+          }
+          
+          .btn-danger {
+            background-color: #6a4c3c;
+            border: none;
+          }
+           
+        :root {
+            --primary-color: #2C5F2D;
+            --accent-color: #97BC62;
+            --light-color: #F7F7E8;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-color);
+        }
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/300');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        .card-blog {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .card-blog:hover {
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ꦄꦼꦤ꧀ꦏꦗꦩꦸ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pesan.html">Pesan Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Blog Enka Jamu</h1>
+            <p class="lead">Informasi seputar jamu, kesehatan, dan gaya hidup alami</p>
+        </div>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Blog Post 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-blog h-100">
+                        <img src="assets/images/manfaatkunyitasam.png" class="card-img-top" alt="Manfaat Kunyit Asam">
+                        <div class="card-body">
+                            <h5 class="card-title">Manfaat Kunyit Asam untuk Kesehatan</h5>
+                            <p class="card-text">Kunyit Asam dikenal sebagai minuman tradisional yang menyegarkan dan kaya manfaat. Apa saja khasiatnya?</p>
+                            <a href="https://www.halodoc.com/artikel/11-manfaat-kunyit-asam-untuk-kesehatan-tingkatkan-imunitas-tubuh" target="_blank" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-blog h-100">
+                        <img src="assets/images/imun.png" class="card-img-top" alt="Tips Menjaga Imun">
+                        <div class="card-body">
+                            <h5 class="card-title">Tips Menjaga Imun dengan Jamu</h5>
+                            <p class="card-text">Imunitas tubuh bisa dijaga dengan bahan alami. Yuk, intip tips sederhana menjaga imun pakai jamu!</p>
+                            <a href="https://www.cnnindonesia.com/gaya-hidup/20210713100721-262-666894/4-jamu-tradisional-yang-bantu-menambah-imun-tubuh" target="_blank" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Post 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-blog h-100">
+                        <img src="assets/images/dirumah.png" class="card-img-top" alt="Membuat Jamu di Rumah">
+                        <div class="card-body">
+                            <h5 class="card-title">Cara Mudah Membuat Jamu di Rumah</h5>
+                            <p class="card-text">Dengan bahan dapur yang sederhana, kamu bisa membuat jamu sendiri di rumah. Simak resep praktisnya di sini.</p>
+                            <a href="https://www.fimela.com/food/read/4499204/5-resep-jamu-tradisional-ala-rumahan-untuk-menjaga-kesehatan" target="_blank" class="btn btn-sm btn-primary">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol Selengkapnya -->
+            <div class="text-center mt-5">
+                <a href="https://www.google.com/search?q=artikel+tentang+jamu" target="_blank" class="btn btn-outline-primary">
+                    <i class="fas fa-book-open me-2"></i>Lihat Artikel Lainnya
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Enka Jamu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+ 

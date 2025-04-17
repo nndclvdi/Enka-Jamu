@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk - Enka Jamu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+          }
+          .navbar {
+            background-color: #2d6a4f; 
+          }
+          
+          .btn-success {
+            background-color: #40916c;
+            border: none;
+          }
+          
+          .btn-danger {
+            background-color: #6a4c3c;
+            border: none;
+          }
+          
+          
+        :root {
+            --primary-color: #2C5F2D; 
+            --secondary-color: #4E342E; 
+            --accent-color: #97BC62; 
+            --light-color: #F7F7E8; 
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/300');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .product-card {
+            border: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-badge {
+            background-color: var(--accent-color);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .filter-btn {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            margin-right: 8px;
+            border-radius: 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+#cartCount {
+    min-width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ꦄꦼꦤ꧀ꦏꦗꦩꦸ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tentang.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pesan.html">Pesan Sekarang</a>
+                    </li>
+                    <li class="nav-item position-relative">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge bg-danger rounded-circle position-absolute top-0 start-100 translate-middle" id="cartCount" style="font-size: 0.7rem; padding: 4px 6px;">0</span>
+                        </a>
+                    </li>                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Produk Jamu Kami</h1>
+            <p class="lead">Temukan berbagai produk jamu berkualitas untuk kesehatan dan kebugaran Anda</p>
+        </div>
+    </header>
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Filter Controls -->
+            <div class="mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4>Filter Produk</h4>
+                    <div class="d-flex">
+                        <div class="input-group" style="width: 300px;">
+                            <input type="text" class="form-control" placeholder="Cari produk..." id="searchInput">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-container">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="serbuk">Serbuk</button>
+                    <button class="filter-btn" data-filter="cair">Sirup Cair</button>
+                    <button class="filter-btn" data-filter="kapsul">Kapsul</button>
+                    <button class="filter-btn" data-filter="paket">Paket</button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="row" id="productContainer">
+                <!-- Product 1 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="serbuk">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/jamukuntiyasam.png" class="card-img-top" alt="Jamu Kunyit Asam">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Serbuk</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jamu Kunyit Asam</h5>
+                            <p class="card-text">Perpaduan kunyit dan asam jawa yang menyegarkan, membantu melancarkan peredaran darah dan pencernaan.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 25.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="serbuk">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/jamuberaskencur.png" class="card-img-top" alt="Jamu Beras Kencur">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Serbuk</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jamu Beras Kencur</h5>
+                            <p class="card-text">Minuman tradisional yang meningkatkan nafsu makan dan menjaga stamina tubuh tetap prima.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 28.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="serbuk">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/jamutemulawak.png" class="card-img-top" alt="Jamu Temulawak">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Serbuk</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jamu Temulawak</h5>
+                            <p class="card-text">Ramuan tradisional untuk menjaga kesehatan hati dan meningkatkan sistem kekebalan tubuh.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 30.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="cair">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/sirupkunyitasam.png" class="card-img-top" alt="Sirup Kunyit Asam">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Sirup Cair</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sirup Kunyit Asam</h5>
+                            <p class="card-text">Sirup konsentrat kunyit asam yang praktis, tinggal diseduh dengan air panas atau dingin.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 35.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="cair">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/sirupberaskencur.png" class="card-img-top" alt="Sirup Beras Kencur">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Sirup Cair</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Sirup Beras Kencur</h5>
+                            <p class="card-text">Ekstrak beras kencur dalam bentuk sirup untuk meningkatkan nafsu makan dan menjaga stamina.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 38.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="kapsul">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/kapsultemulawak.png" class="card-img-top" alt="Kapsul Temulawak">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Kapsul</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kapsul Temulawak</h5>
+                            <p class="card-text">Ekstrak temulawak terkonsentrasi dalam bentuk kapsul untuk meningkatkan kesehatan hati.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 45.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="kapsul">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/kapsuljahemerah.png" class="card-img-top" alt="Kapsul Jahe Merah">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Kapsul</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Kapsul Jahe Merah</h5>
+                            <p class="card-text">Kapsul jahe merah untuk meningkatkan daya tahan tubuh dan menghangatkan badan.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 48.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="paket">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/pqkwtsehatharian.png" class="card-img-top" alt="Paket Sehat Harian">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Paket</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Sehat Harian</h5>
+                            <p class="card-text">Paket berisi 3 jenis jamu (kunyit asam, beras kencur, dan temulawak) untuk kebutuhan sehari-hari.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 75.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 9 -->
+                <div class="col-md-4 col-sm-6 product-item" data-category="paket">
+                    <div class="card product-card h-100">
+                        <div class="position-relative">
+                            <img src="assets/images/paketdetox.png" class="card-img-top" alt="Paket Detox">
+                            <span class="badge category-badge position-absolute top-0 end-0 m-2">Paket</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Paket Detox</h5>
+                            <p class="card-text">Paket khusus untuk detoksifikasi tubuh, berisi sirup kunyit asam dan kapsul temulawak.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">Rp 95.000</span>
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-shopping-cart me-1"></i> Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation example" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5>Enka Jamu</h5>
+                    <p>Menyediakan jamu tradisional berkualitas dari bahan-bahan alami pilihan untuk kesehatan dan kebugaran.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Navigasi</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Beranda</a></li>
+                        <li><a href="produk.html" class="text-white">Produk</a></li>
+                        <li><a href="tentang.html" class="text-white">Tentang Kami</a></li>
+                        <li><a href="kontak.html" class="text-white">Kontak</a></li>
+                        <li><a href="blog.html" class="text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Kontak</h5>
+                    <ul class="list-unstyled">
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Jl. Raya Universitas Pembangunan Nasional Veteran Jawa Timur</li>
+                            <li><i class="fas fa-phone me-2"></i> 23081010036</li>
+                            <li><i class="fas fa-envelope me-2"></i> info@enkajamu.com</li>
+                        </ul>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Sosial Media</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 Enka Jamu. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productItems = document.querySelectorAll('.product-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    productItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            const searchInput = document.getElementById('searchInput');
+            
+            searchInput.addEventListener('keyup', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                productItems.forEach(item => {
+                    const productName = item.querySelector('.card-title').textContent.toLowerCase();
+                    const productDesc = item.querySelector('.card-text').textContent.toLowerCase();
+                    
+                    if (productName.includes(searchTerm) || productDesc.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        let cartCount = 0;
+    
+        document.querySelectorAll('.btn-primary').forEach(button => {
+            button.addEventListener('click', () => {
+                cartCount++;
+                document.getElementById('cartCount').textContent = cartCount;
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Enka Jamu</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+          }
+          .navbar {
+            background-color: #2d6a4f; 
+          }
+          
+          .btn-success {
+            background-color: #40916c;
+            border: none;
+          }
+          
+          .btn-danger {
+            background-color: #6a4c3c;
+            border: none;
+          }
+          
+        :root {
+            --primary-color: #2C5F2D; 
+            --secondary-color: #4E342E; 
+            --accent-color: #97BC62; 
+            --light-color: #F7F7E8; 
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: var(--light-color);
+        }
+        
+        .navbar {
+            background-color: var(--primary-color);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent-color) !important;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+        
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .page-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/300');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .about-img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .timeline {
+            position: relative;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .timeline:before {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            margin-left: -1px;
+            content: '';
+            background-color: #e9ecef;
+        }
+        
+        .timeline > li {
+            position: relative;
+            margin-bottom: 50px;
+            min-height: 50px;
+        }
+        
+        .timeline > li:after, .timeline > li:before {
+            display: table;
+            content: ' ';
+        }
+        
+        .timeline > li:after {
+            clear: both;
+        }
+        
+        .timeline > li .timeline-panel {
+            position: relative;
+            float: left;
+            width: 46%;
+            padding: 20px;
+            text-align: right;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .timeline > li .timeline-panel:before {
+            right: -15px;
+            border-left-width: 15px;
+            border-right-width: 0;
+        }
+        
+        .timeline > li .timeline-image {
+            position: absolute;
+            z-index: 100;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            margin-left: -40px;
+            text-align: center;
+            color: white;
+            border: 7px solid #e9ecef;
+            border-radius: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .timeline > li .timeline-image h4 {
+            font-size: 10px;
+            line-height: 14px;
+            margin-top: 12px;
+        }
+        
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+            text-align: left;
+        }
+        
+        .timeline > li.timeline-inverted > .timeline-panel:before {
+            left: -15px;
+            border-right-width: 15px;
+            border-left-width: 0;
+        }
+        
+        @media (max-width: 767px) {
+            .timeline:before {
+                left: 40px;
+            }
+            
+            .timeline > li .timeline-panel {
+                float: right;
+                width: calc(100% - 90px);
+                text-align: left;
+            }
+            
+            .timeline > li .timeline-image {
+                left: 0;
+                margin-left: 0;
+                width: 70px;
+                height: 70px;
+            }
+            
+            .timeline > li.timeline-inverted > .timeline-panel {
+                float: right;
+                text-align: left;
+            }
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .team-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-social a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 32px;
+            height: 32px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            transition: all 0.3s;
+        }
+        .btn {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+          }
+          
+          .card {
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+          }
+          
+        
+        .team-social a:hover {
+            background-color: var(--accent-color);
+        }
+        .justify-text {
+            text-align: justify;
+          }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ꦄꦼꦤ꧀ꦏꦗꦩꦸ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produk.html">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tentang.html">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pesan.html">Pesan Sekarang</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Tentang Kami</h1>
+            <p class="lead">Mengenal lebih dekat dengan Enka Jamu dan perjalanan kami</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="assets/images/21247680-EF04-48E4-AF5A-31FF897B0201.JPG" alt="Tentang Enka Jamu" class="img-fluid about-img">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Sejarah ꦄꦼꦤ꧀ꦏꦗꦩꦸ</h2>
+                    <p style="text-align: justify;">ꦄꦼꦤ꧀ꦏꦗꦩꦸ sendiri adalah Enka jamu dalam bahasa latin. Enka Jamu didirikan pada tahun 2010 oleh Donanda Suwondo, seorang ahli jamu tradisional yang memiliki warisan resep keluarga turun-temurun. Berawal dari dapur rumah di Sidoarjo, Jawa Tengah, Beliau membuat jamu dengan bahan-bahan alami berkualitas untuk keluarga dan tetangga sekitar.</p>
+                    <p style="text-align: justify;">Permintaan yang terus meningkat mendorong Beliau untuk mengembangkan usahanya menjadi Enka Jamu, sebuah perusahaan jamu yang mengombinasikan resep tradisional dengan teknologi modern untuk menciptakan produk jamu berkualitas tinggi.</p>
+                    <p style="text-align: justify;">Nama "Enka" sendiri diambil dari inisial panggilan (n)anda menjadi en dan ka diambil dari (k)eluarg(a) dan menjadi simbol komitmen kami terhadap kualitas dan keaslian jamu Indonesia.</p>
+                    <p style="text-align: justify;">Kini, Enka Jamu telah berkembang menjadi salah satu produsen jamu terkemuka di Indonesia dengan berbagai produk jamu yang tersedia dalam bentuk serbuk, sirup, dan kapsul untuk memenuhi kebutuhan konsumen modern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Mission Section -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Visi & Misi</h2>
+                <p class="text-muted">Apa yang menjadi panduan kami dalam berkarya</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="p-4 border rounded bg-light h-100">
+                        <h4 class="fw-bold text-primary">Visi</h4>
+                        <p>Menjadi pelopor jamu modern berbasis resep tradisional Indonesia yang dikenal di tingkat nasional maupun internasional.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="p-4 border rounded bg-light h-100">
+                        <h4 class="fw-bold text-primary">Misi</h4>
+                        <ul class="mb-0">
+                            <li>Menghadirkan produk jamu berkualitas tinggi dan terpercaya.</li>
+                            <li>Melestarikan budaya jamu tradisional Indonesia.</li>
+                            <li>Memberdayakan petani lokal dan komunitas herbal.</li>
+                            <li>Mengembangkan inovasi produk berbasis riset dan teknologi modern.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Perjalanan Kami</h2>
+                <p class="text-muted">Langkah demi langkah menuju kemajuan</p>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image">
+                        <h4>2010</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <p>Enka Jamu resmi berdiri sebagai usaha rumahan di Sukoharjo, dimulai dari produksi manual dengan bahan alami.</p>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>2015</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <p>Memperluas distribusi ke beberapa kota besar di Jawa dan memperkenalkan kemasan modern.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image">
+                        <h4>2018</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <p>Memperoleh sertifikasi BPOM dan Halal, meningkatkan kepercayaan konsumen terhadap produk Enka Jamu.</p>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>2023</h4>
+                    </div>
+                    <div class="timeline-panel">
+                        <p>Meluncurkan produk berbasis kapsul dan membuka cabang produksi baru di Yogyakarta.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Enka Jamu. All rights reserved.</p>
+            <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
